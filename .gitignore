@@ -1,2 +1,18 @@
 
 src/.vs/
+
+src/Api.Aplication/Aplication/bin/
+
+src/Api.Aplication/Aplication/obj/
+
+src/Api.CrossCutting/CrossCutting/bin/
+
+src/Api.CrossCutting/CrossCutting/obj/
+
+src/Api.Domain/Domain/bin/
+
+src/Api.Domain/Domain/obj/
+
+src/Api.Data/Data/obj/
+
+src/Api.Service/Service/obj/
