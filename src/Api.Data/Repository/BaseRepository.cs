@@ -17,11 +17,19 @@ namespace Data.Repository
         {
              try
             {
+                var result = await _dataset.SingleOrDefaultAsync(p => p.id.Equals(id));
+                if (result == null) {
+                    return false;
+                }
+
+                result.status = Status.inativo;
+                _context.Entry(result).CurrentValues.SetValues(result);
+                await _context.SaveChangesAsync();
+
                 return true;
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
@@ -37,6 +45,7 @@ namespace Data.Repository
 
                 item.createAt = DateTime.Now;
                 item.updateAt = DateTime.Now;
+                item.status = Status.ativo;
 
                 _dataset.Add(item);
 
