@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Entites
 {
-    internal abstract class BaseEntity
+    public abstract class BaseEntity
     {
 		[Key]
         public Guid Id { get; set; }

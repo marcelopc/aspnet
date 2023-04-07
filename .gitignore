@@ -9,10 +9,22 @@ src/Api.CrossCutting/CrossCutting/bin/
 
 src/Api.CrossCutting/CrossCutting/obj/
 
-src/Api.Domain/Domain/bin/
+src/Api.Domain/bin/
 
-src/Api.Domain/Domain/obj/
+src/Api.Domain/obj/
 
-src/Api.Data/Data/obj/
+src/Api.Data/obj/
 
-src/Api.Service/Service/obj/
+src/Api.Service/obj/
+
+src/Api.Aplication/.vs/
+
+src/Api.Aplication/bin/
+
+src/Api.Aplication/obj/
+
+src/Api.CrossCutting/bin/
+
+src/Api.CrossCutting/obj/
+
+src/Api.Service/bin/
