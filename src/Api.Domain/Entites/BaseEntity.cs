@@ -10,10 +10,10 @@ namespace Domain.Entites
     public abstract class BaseEntity
     {
 		[Key]
-        public Guid Id { get; set; }
+        public Guid id { get; set; }
 		private DateTime? _createAt;
 
-		public DateTime? CreateAt
+		public DateTime? createAt
 		{
 			get { return  _createAt; }
 			set {  _createAt = (value == null ? DateTime.UtcNow : value); }
@@ -21,8 +21,8 @@ namespace Domain.Entites
 
 		private DateTime? _updateAt;
 
-		public DateTime? MyProperty
-		{
+		public DateTime? updateAt
+        {
 			get { return _updateAt; }
 			set { _updateAt = (value == null ? DateTime.UtcNow : value);  }
 		}

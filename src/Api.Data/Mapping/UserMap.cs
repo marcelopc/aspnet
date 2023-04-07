@@ -14,10 +14,10 @@ namespace Data.Mapping
         public void Configure(EntityTypeBuilder<UserEntity> builder)
         {
             builder.ToTable("users");
-            builder.HasKey(u => u.Id);
-            builder.HasIndex(u => u.Email).IsUnique();
-            builder.Property(u=> u.Name).IsRequired().HasMaxLength(60);
-            builder.Property(u=> u.Email).HasMaxLength(100);
+            builder.HasKey(u => u.id);
+            builder.HasIndex(u => u.email).IsUnique();
+            builder.Property(u=> u.name).IsRequired().HasMaxLength(60);
+            builder.Property(u=> u.email).HasMaxLength(100);
         }
     }
 }
