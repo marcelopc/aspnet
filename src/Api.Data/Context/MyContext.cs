@@ -4,7 +4,7 @@ using Data.Mapping;
 
 namespace Data.Context
 {
-    internal class MyContext : DbContext
+    public class MyContext : DbContext
     {
         public DbSet<UserEntity> Users { get; set; }
         public MyContext(DbContextOptions<MyContext> options): base (options) { }
