@@ -18,6 +18,7 @@ namespace Data.Repository
              try
             {
                 var result = await _dataset.SingleOrDefaultAsync(p => p.id.Equals(id));
+
                 if (result == null) {
                     return false;
                 }
@@ -59,6 +60,19 @@ namespace Data.Repository
 
         }
 
+        public async Task<bool> ExistAsync(Guid id)
+        {
+            try
+            {
+                return await _dataset.AnyAsync(p => p.id.Equals(id));
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
         public async Task<T> SelectAsync(Guid id)
         {
             try
