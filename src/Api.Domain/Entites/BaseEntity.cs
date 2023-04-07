@@ -26,6 +26,7 @@ namespace Domain.Entites
 			get { return _updateAt; }
 			set { _updateAt = (value == null ? DateTime.UtcNow : value);  }
 		}
+		public Status status { get; set; }
 
 
 	}
