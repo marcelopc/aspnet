@@ -28,3 +28,5 @@ src/Api.CrossCutting/bin/
 src/Api.CrossCutting/obj/
 
 src/Api.Service/bin/
+
+src/Api.Data/bin/
