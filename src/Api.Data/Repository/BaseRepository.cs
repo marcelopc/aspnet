@@ -77,7 +77,7 @@ namespace Data.Repository
         {
             try
             {
-                return null;
+                return await _dataset.SingleOrDefaultAsync(p => p.id.Equals(id));
             }
             catch (Exception ex)
             {
@@ -90,7 +90,8 @@ namespace Data.Repository
         {
             try
             {
-                return null;
+                return await _dataset.ToListAsync();
+
             }
             catch (Exception ex)
             {
