@@ -18,6 +18,7 @@ namespace Data.Mapping
             builder.HasIndex(u => u.email).IsUnique();
             builder.Property(u=> u.name).IsRequired().HasMaxLength(60);
             builder.Property(u=> u.email).HasMaxLength(100);
+            builder.Property(u => u.status).HasConversion<String>();
         }
     }
 }

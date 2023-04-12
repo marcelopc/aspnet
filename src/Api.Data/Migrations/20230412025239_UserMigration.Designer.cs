@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Data.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20230407013726_UserMigration")]
+    [Migration("20230412025239_UserMigration")]
     partial class UserMigration
     {
         /// <inheritdoc />
@@ -40,6 +40,9 @@ namespace Data.Migrations
                         .IsRequired()
                         .HasMaxLength(60)
                         .HasColumnType("varchar(60)");
+
+                    b.Property<int>("status")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("updateAt")
                         .HasColumnType("datetime(6)");

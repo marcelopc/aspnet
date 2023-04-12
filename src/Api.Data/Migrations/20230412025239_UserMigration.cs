@@ -24,7 +24,8 @@ namespace Data.Migrations
                     email = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     createAt = table.Column<DateTime>(type: "datetime(6)", nullable: true),
-                    updateAt = table.Column<DateTime>(type: "datetime(6)", nullable: true)
+                    updateAt = table.Column<DateTime>(type: "datetime(6)", nullable: true),
+                    status = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

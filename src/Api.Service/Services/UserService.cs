@@ -12,7 +12,6 @@ namespace Service.Services
         {
             _repository = repository;
         }
-
         public async Task<bool> Delete(Guid id)
         {
             return await _repository.DeleteAsync(id);
@@ -35,7 +34,7 @@ namespace Service.Services
 
         public async Task<UserEntity> Put(UserEntity user)
         {
-            return await _repository.UpdatetAsync(user);
+            return await _repository.UpdateAsync(user);
         }
     }
 }

@@ -100,7 +100,7 @@ namespace Data.Repository
             }
         }
 
-        public async Task<T> UpdatetAsync(T item)
+        public async Task<T> UpdateAsync(T item)
         {
             try
             {
