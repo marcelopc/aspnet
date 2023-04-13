@@ -77,7 +77,7 @@ namespace Data.Repository
         {
             try
             {
-                return await _dataset.SingleOrDefaultAsync(p => p.id.Equals(id));
+                return await _dataset.SingleOrDefaultAsync(p => p.id.Equals(id) && p.status == Status.ativo);
             }
             catch (Exception ex)
             {
@@ -90,7 +90,8 @@ namespace Data.Repository
         {
             try
             {
-                return await _dataset.ToListAsync();
+                var response = await _dataset.ToListAsync();
+                return response.Where(p => p.status == Status.ativo);
 
             }
             catch (Exception ex)
