@@ -78,6 +78,32 @@ namespace Aplication.Controllers
             }
         }
 
+        [HttpPut]
+        public async Task<ActionResult> Put([FromBody] UserEntity user)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                var result = await _userService.Put(user);
+                if (result != null)
+                {
+                    return Ok(result);
+                }
+                else
+                {
+                    return BadRequest();
+                }
+            }
+            catch (ArgumentException error)
+            {
+                return StatusCode((int)HttpStatusCode.InternalServerError, error.Message);
+            }
+        }
+
     }
  
 }
