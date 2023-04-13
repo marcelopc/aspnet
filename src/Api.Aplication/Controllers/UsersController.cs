@@ -103,6 +103,24 @@ namespace Aplication.Controllers
                 return StatusCode((int)HttpStatusCode.InternalServerError, error.Message);
             }
         }
+        [HttpDelete ("{id}")]
+        public async Task<ActionResult> Delete(Guid id)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                return Ok(await _userService.Delete(id));
+
+            }
+            catch (ArgumentException error)
+            {
+                return StatusCode((int)HttpStatusCode.InternalServerError, error.Message);
+            }
+        }
 
     }
  
