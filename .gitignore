@@ -30,3 +30,9 @@ src/Api.CrossCutting/obj/
 src/Api.Service/bin/
 
 src/Api.Data/bin/
+
+src/Api.Service/Service/obj/
+
+src/Api.Domain/Domain/obj/
+
+src/Api.Data/Data/obj/

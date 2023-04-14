@@ -18,6 +18,10 @@ new ConfigureFromConfigurationOptions<TokenConfigurations>(
     ).Configure(tokenConfiguration);
 builder.Services.AddSingleton(tokenConfiguration);
 
+builder.Services.AddAuthentication(authOptions => {
+    authOptions.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    authOptions.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+});
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

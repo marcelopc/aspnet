@@ -63,7 +63,11 @@ namespace Service.Services
                 return SuccessObject(createDate, expirationDate, token, user);
             }
    
-            return null;
+            return new
+            {
+                authenticated = false,
+                message = "Falha ao autenticar"
+            };
         }
 
         private object SuccessObject(DateTime createDate, DateTime expirationDate, string token, LoginDto user)
