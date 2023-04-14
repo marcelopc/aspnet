@@ -1,7 +1,9 @@
 ﻿using Data.Context;
+using Data.Implementations;
 using Data.Repository;
 using Domain.Interfaces;
 using Domain.Interfaces.Services.User;
+using Domain.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Service.Services;
@@ -22,6 +24,7 @@ namespace CrossCutting.DenpendecyInjection
             );
 
             serviceCollection.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
+            serviceCollection.AddScoped<IUserRepository, UserImplementation>();
         }
     }
 }
