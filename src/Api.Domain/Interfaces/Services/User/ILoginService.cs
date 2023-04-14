@@ -1,9 +1,9 @@
-﻿using Domain.Entites;
+﻿using Domain.Dtos;
 
 namespace Domain.Interfaces.Services.User
 {
     public interface ILoginService
     {
-        Task<object> FindByLogin(UserEntity user);
+        Task<object> FindByLogin(LoginDto user);
     }
 }
